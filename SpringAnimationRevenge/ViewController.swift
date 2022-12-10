@@ -13,14 +13,18 @@ class ViewController: UIViewController {
     private var currentAnimation = Animation.getRandomAnimation()
     @IBOutlet weak var animatedView: SpringView!
     @IBOutlet weak var animatedViewLable: UILabel!
+    @IBOutlet weak var runAnimationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animatedView.layer.cornerRadius = 30
+        runAnimationButton.setTitle("Run \(currentAnimation.preset)", for: .normal)
+        runAnimationButton.layer.cornerRadius = 15
         animatedViewLable.text = currentAnimation.animationDescription
+        
     }
-
-    @IBAction func runAnimationButton(_ sender: SpringButton) {
+    
+    @IBAction func runAnimation(_ sender: UIButton) {
         animatedViewLable.text = currentAnimation.animationDescription
         animatedView.animation = currentAnimation.preset
         animatedView.curve = currentAnimation.curve
@@ -32,7 +36,5 @@ class ViewController: UIViewController {
         currentAnimation = Animation.getRandomAnimation()
         sender.setTitle("Run \(currentAnimation.preset)", for: .normal)
     }
-    
-
 }
 

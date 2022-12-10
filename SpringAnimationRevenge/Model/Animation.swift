@@ -18,9 +18,9 @@ struct Animation {
         """
         preset : \(self.preset)
         curve : \(self.curve)
-        force : \(self.force)
-        duration : \(self.duration)
-        delay : \(self.delay)
+        force : \(String(format: "%.02f", self.force))
+        duration : \(String(format: "%.02f", self.duration))
+        delay : \(String(format: "%.02f", self.delay))
         """
     }
     
