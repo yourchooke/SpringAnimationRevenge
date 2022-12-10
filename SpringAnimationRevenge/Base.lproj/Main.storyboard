@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="gray" title="Button">
                                     <fontDescription key="titleFontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="27"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -31,9 +31,21 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6w-f6-Qtf" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="16" y="16" width="288" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7R-V6-wJe">
+                                        <rect key="frame" x="16" y="16" width="256" height="168"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="r7R-V6-wJe" secondAttribute="bottom" constant="16" id="497-6v-gvV"/>
+                                    <constraint firstAttribute="trailing" secondItem="r7R-V6-wJe" secondAttribute="trailing" constant="16" id="6Dj-f7-TOw"/>
+                                    <constraint firstItem="r7R-V6-wJe" firstAttribute="leading" secondItem="g6w-f6-Qtf" secondAttribute="leading" constant="16" id="Auc-2O-fwi"/>
                                     <constraint firstAttribute="height" constant="200" id="N2w-P0-96R"/>
+                                    <constraint firstItem="r7R-V6-wJe" firstAttribute="top" secondItem="g6w-f6-Qtf" secondAttribute="top" constant="16" id="Zbg-QE-ikW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -50,11 +62,12 @@
                     </view>
                     <connections>
                         <outlet property="animatedView" destination="g6w-f6-Qtf" id="gdN-K7-T9z"/>
+                        <outlet property="animatedViewLable" destination="r7R-V6-wJe" id="qRp-dC-ixO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18" y="-27"/>
+            <point key="canvasLocation" x="16.875" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
